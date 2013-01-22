@@ -1,0 +1,41 @@
+<p><%= link_to 'Home', phones_path %>
+<%= link_to 'Top 5', top_phones_path %>
+<%= link_to 'Search Phones', search_phones_path %>
+<%= link_to 'Add New Phone', new_phone_path %>
+
+<br />
+<center>
+<h1>Phone Database</h1>
+
+<table cellpadding="10">
+  <tr>
+    <th>Manufacturer</th>
+    <th>Name</th>
+    <th>Rating</th>
+    <th>Os</th>
+    <!-- <th>Description</th> --!>
+    <th>Screen size</th>
+    <th>Weight</th>
+    <th>Release date</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @phones.each do |phone| %>
+  <tr align="right">
+    <td><%= phone.manufacturer %></td>
+    <td><%= phone.name %></td>
+    <td><%= phone.rating %></td>
+    <td><%= phone.os %></td>
+    <!-- <td><%= phone.description %></td> --!>
+    <td><%= phone.screen_size %></td>
+    <td><%= phone.weight %></td>
+    <td><%= phone.release_date %></td>
+    <td id="manage"><%= link_to 'Show', phone %></td>
+    <td id="manage"><%= link_to 'Edit', edit_phone_path(phone) %></td>
+    <td id="manage"><%= link_to 'Destroy', phone, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+</center>

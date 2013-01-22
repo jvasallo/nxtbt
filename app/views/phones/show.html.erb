@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Manufacturer:</b>
+  <%= @phone.manufacturer %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%= @phone.name %>
+</p>
+
+<p>
+  <b>Rating:</b>
+  <%= @phone.rating %>
+</p>
+
+<p>
+  <b>Os:</b>
+  <%= @phone.os %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @phone.description %>
+</p>
+
+<p>
+  <b>Screen size:</b>
+  <%= @phone.screen_size %>
+</p>
+
+<p>
+  <b>Weight:</b>
+  <%= @phone.weight %>
+</p>
+
+<p>
+  <b>Release date:</b>
+  <%= @phone.release_date %>
+</p>
+
+
+<%= link_to 'Edit', edit_phone_path(@phone) %> |
+<%= link_to 'Back', phones_path %>

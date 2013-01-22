@@ -1,0 +1,25 @@
+<p><%= link_to 'Home', phones_path %>
+<%= link_to 'Top 5', top_phones_path %>
+<%= link_to 'Search Phones', search_phones_path %>
+<%= link_to 'Add New Phone', new_phone_path %>
+
+<br />
+<center>
+<h1>Top 5 Phones of 2012</h1>
+
+<table cellpadding="10">
+  <tr>
+    <th>Manufacturer</th>
+    <th>Name</th>
+    <th>Rating</th>
+  </tr>
+
+<% @phones.each do |phone| %>
+  <tr align="right">
+    <td><%= phone.manufacturer %></td>
+    <td><%= phone.name %></td>
+    <td><%= phone.rating %></td>
+  </tr>
+<% end %>
+</table>
+</center>
